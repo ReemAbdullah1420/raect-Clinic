@@ -1,5 +1,4 @@
 import { useContext } from "react"
-import NavbarItem from "../components/NavbarItem"
 import ClinicContext from "../utils/ClinicContext"
 import styles from "./SignUp.module.css"
 
@@ -9,7 +8,7 @@ function SignUp() {
   return (
     <>
       
-      <NavbarItem />
+     
       <div className={styles.SignupForm}>
         <form action="" method="POST" id="login" className={styles.animate}>
           <i title="REMEMBER" onclick="savedetails()" className={styles.fafasave}></i>

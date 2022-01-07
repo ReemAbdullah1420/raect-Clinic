@@ -1,0 +1,33 @@
+.img1 {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.img2 {
+    display: flex;
+    justify-content: flex-end;
+    width: 200px;
+}
+
+.h1 {
+
+    font-size: 40px;
+    border: 1px solid white;
+    width: 500px;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+.h1h {
+    display: flex;
+    justify-content: center;
+    bottom: 100%;
+}
+
+.img3 {
+    filter: invert(2);
+    width: 110%;
+
+}

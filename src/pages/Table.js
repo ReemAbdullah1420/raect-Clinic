@@ -3,7 +3,6 @@ import styles from "./Table.module.css"
 function Tableitem() {
   return (
     <>
-      <NavbarItem />
       <section>
         <div className={styles.tblHeader}>
           <table cellpadding="0" cellspacing="0" border="0">

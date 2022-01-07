@@ -3,7 +3,6 @@ import styles from "./navbar.module.css"
 function Back() {
   return (
     <div>
-      <img src="https://i.pinimg.com/564x/97/7f/e3/977fe3c12d7db07bab41eb8a379a5a02.jpg" style={{ width: "100%" }} />
       <div
         style={{
           backgroundImage: ` url("${imageee}")`,
@@ -26,6 +25,7 @@ function Back() {
         <h1 className={styles.h1}>Where your </h1>
         <span className={styles.h3}>your health matters</span>
       </div>
+  
     </div>
   )
 }

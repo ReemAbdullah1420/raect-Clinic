@@ -38,14 +38,6 @@ a {
     }
 }
 
-body {
-    margin: 0;
-    background-image: url("https://i.pinimg.com/564x/97/7f/e3/977fe3c12d7db07bab41eb8a379a5a02.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-}
-
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

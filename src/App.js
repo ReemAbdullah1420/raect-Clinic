@@ -7,6 +7,7 @@ import Tableitem from "./pages/Table"
 import Register from "./pages/Register"
 import SignUp from "./pages/SignUp"
 import Covid from "./pages/Covid"
+import NavbarItem from "./components/NavbarItem"
 
 function App() {
   const navigate = useNavigate()
@@ -67,6 +68,7 @@ function App() {
     <>
       <ClinicContext.Provider value={store}>
         <ToastContainer />
+        <NavbarItem />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />

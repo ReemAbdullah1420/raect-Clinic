@@ -14,7 +14,7 @@ function Register() {
   })
   return (
     <>
-      <NavbarItem />
+
       <div className={styles.container}>
         <div className={styles.card}>
           <img src={image1} />
