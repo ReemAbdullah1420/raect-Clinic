@@ -1,248 +1,32 @@
-import NavbarItem from "../components/NavbarItem"
-import styles from "./Table.module.css"
+import "../style.css"
 function Tableitem() {
   return (
     <>
       <section>
-        <div className={styles.tblHeader}>
+        <div style={{ marginTop: "200px" }} class="tbl-header">
           <table cellpadding="0" cellspacing="0" border="0">
             <thead>
               <tr>
-                <th>Code</th>
-                <th>Company</th>
-                <th>Price</th>
-                <th>Change</th>
-                <th>Change %</th>
+                <th style={{ textAlign: "center" }}>user</th>
+                <th style={{ textAlign: "center" }}>email</th>
+                <th style={{ textAlign: "center" }}>image</th>
+                {/* <th style={{textAlign:"center"}}></th>
+          <th style={{textAlign:"center"}}>/th> */}
+                <th style={{ textAlign: "center" }}>Show</th>
               </tr>
             </thead>
           </table>
         </div>
-        <div className={styles.tblContent}>
+        <div class="tbl-content">
           <table cellpadding="0" cellspacing="0" border="0">
             <tbody>
-              <tr>
-                <td>AAC</td>
-                <td>AUSTRALIAN COMPANY </td>
-                <td>$1.38</td>
-                <td>+2.01</td>
-                <td>-0.36%</td>
-              </tr>
-              <tr>
-                <td>AAD</td>
-                <td>AUSENCO</td>
-                <td>$2.38</td>
-                <td>-0.01</td>
-                <td>-1.36%</td>
-              </tr>
-              <tr>
-                <td>AAX</td>
-                <td>ADELAIDE</td>
-                <td>$3.22</td>
-                <td>+0.01</td>
-                <td>+1.36%</td>
-              </tr>
-              <tr>
-                <td>XXD</td>
-                <td>ADITYA BIRLA</td>
-                <td>$1.02</td>
-                <td>-1.01</td>
-                <td>+2.36%</td>
-              </tr>
-              <tr>
-                <td>AAC</td>
-                <td>AUSTRALIAN COMPANY </td>
-                <td>$1.38</td>
-                <td>+2.01</td>
-                <td>-0.36%</td>
-              </tr>
-              <tr>
-                <td>AAD</td>
-                <td>AUSENCO</td>
-                <td>$2.38</td>
-                <td>-0.01</td>
-                <td>-1.36%</td>
-              </tr>
-              <tr>
-                <td>AAX</td>
-                <td>ADELAIDE</td>
-                <td>$3.22</td>
-                <td>+0.01</td>
-                <td>+1.36%</td>
-              </tr>
-              <tr>
-                <td>XXD</td>
-                <td>ADITYA BIRLA</td>
-                <td>$1.02</td>
-                <td>-1.01</td>
-                <td>+2.36%</td>
-              </tr>
-              <tr>
-                <td>AAC</td>
-                <td>AUSTRALIAN COMPANY </td>
-                <td>$1.38</td>
-                <td>+2.01</td>
-                <td>-0.36%</td>
-              </tr>
-              <tr>
-                <td>AAD</td>
-                <td>AUSENCO</td>
-                <td>$2.38</td>
-                <td>-0.01</td>
-                <td>-1.36%</td>
-              </tr>
-              <tr>
-                <td>AAX</td>
-                <td>ADELAIDE</td>
-                <td>$3.22</td>
-                <td>+0.01</td>
-                <td>+1.36%</td>
-              </tr>
-              <tr>
-                <td>XXD</td>
-                <td>ADITYA BIRLA</td>
-                <td>$1.02</td>
-                <td>-1.01</td>
-                <td>+2.36%</td>
-              </tr>
-              <tr>
-                <td>AAC</td>
-                <td>AUSTRALIAN COMPANY </td>
-                <td>$1.38</td>
-                <td>+2.01</td>
-                <td>-0.36%</td>
-              </tr>
-              <tr>
-                <td>AAD</td>
-                <td>AUSENCO</td>
-                <td>$2.38</td>
-                <td>-0.01</td>
-                <td>-1.36%</td>
-              </tr>
-              <tr>
-                <td>AAX</td>
-                <td>ADELAIDE</td>
-                <td>$3.22</td>
-                <td>+0.01</td>
-                <td>+1.36%</td>
-              </tr>
-              <tr>
-                <td>XXD</td>
-                <td>ADITYA BIRLA</td>
-                <td>$1.02</td>
-                <td>-1.01</td>
-                <td>+2.36%</td>
-              </tr>
-              <tr>
-                <td>AAC</td>
-                <td>AUSTRALIAN COMPANY </td>
-                <td>$1.38</td>
-                <td>+2.01</td>
-                <td>-0.36%</td>
-              </tr>
-              <tr>
-                <td>AAD</td>
-                <td>AUSENCO</td>
-                <td>$2.38</td>
-                <td>-0.01</td>
-                <td>-1.36%</td>
-              </tr>
-              <tr>
-                <td>AAX</td>
-                <td>ADELAIDE</td>
-                <td>$3.22</td>
-                <td>+0.01</td>
-                <td>+1.36%</td>
-              </tr>
-              <tr>
-                <td>XXD</td>
-                <td>ADITYA BIRLA</td>
-                <td>$1.02</td>
-                <td>-1.01</td>
-                <td>+2.36%</td>
-              </tr>
-              <tr>
-                <td>AAC</td>
-                <td>AUSTRALIAN COMPANY </td>
-                <td>$1.38</td>
-                <td>+2.01</td>
-                <td>-0.36%</td>
-              </tr>
-              <tr>
-                <td>AAD</td>
-                <td>AUSENCO</td>
-                <td>$2.38</td>
-                <td>-0.01</td>
-                <td>-1.36%</td>
-              </tr>
-              <tr>
-                <td>AAX</td>
-                <td>ADELAIDE</td>
-                <td>$3.22</td>
-                <td>+0.01</td>
-                <td>+1.36%</td>
-              </tr>
-              <tr>
-                <td>XXD</td>
-                <td>ADITYA BIRLA</td>
-                <td>$1.02</td>
-                <td>-1.01</td>
-                <td>+2.36%</td>
-              </tr>
-              <tr>
-                <td>AAC</td>
-                <td>AUSTRALIAN COMPANY </td>
-                <td>$1.38</td>
-                <td>+2.01</td>
-                <td>-0.36%</td>
-              </tr>
-              <tr>
-                <td>AAD</td>
-                <td>AUSENCO</td>
-                <td>$2.38</td>
-                <td>-0.01</td>
-                <td>-1.36%</td>
-              </tr>
-              <tr>
-                <td>AAX</td>
-                <td>ADELAIDE</td>
-                <td>$3.22</td>
-                <td>+0.01</td>
-                <td>+1.36%</td>
-              </tr>
-              <tr>
-                <td>XXD</td>
-                <td>ADITYA BIRLA</td>
-                <td>$1.02</td>
-                <td>-1.01</td>
-                <td>+2.36%</td>
-              </tr>
-              <tr>
-                <td>AAC</td>
-                <td>AUSTRALIAN COMPANY </td>
-                <td>$1.38</td>
-                <td>+2.01</td>
-                <td>-0.36%</td>
-              </tr>
-              <tr>
-                <td>AAD</td>
-                <td>AUSENCO</td>
-                <td>$2.38</td>
-                <td>-0.01</td>
-                <td>-1.36%</td>
-              </tr>
-              <tr>
-                <td>AAX</td>
-                <td>ADELAIDE</td>
-                <td>$3.22</td>
-                <td>+0.01</td>
-                <td>+1.36%</td>
-              </tr>
-              <tr>
-                <td>XXD</td>
-                <td>ADITYA BIRLA</td>
-                <td>$1.02</td>
-                <td>-1.01</td>
-                <td>+2.36%</td>
+              <tr style={{ color: "black" }}>
+                <td style={{ textAlign: "center" }}> sss</td>
+                <td style={{ textAlign: "center" }}>sssss</td>
+                <td style={{ textAlign: "center" }}>ss</td>
+                <td style={{ textAlign: "center" }}>
+                  <button>show</button>
+                </td>
               </tr>
             </tbody>
           </table>

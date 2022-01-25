@@ -1,0 +1,15 @@
+.ourservices {
+    overflow: hidden;
+    position: relative;
+    padding: 100px 0 70px;
+    background: #d7e5ec;
+    margin-top: 200px;
+}
+
+.card {
+    background-color: white;
+    width: 24%;
+    height: 450px;
+    border-radius: 12px;
+    margin: 30px;
+}

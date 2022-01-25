@@ -1,5 +1,4 @@
 import VanillaTilt from "vanilla-tilt"
-import NavbarItem from "../components/NavbarItem"
 import styles from "./Register.module.css"
 import image1 from "../assets/10.png"
 import image2 from "../assets/9.png"
@@ -14,24 +13,17 @@ function Register() {
   })
   return (
     <>
-
       <div className={styles.container}>
-        <div className={styles.card}>
-          <img src={image1} />
-          <div className={styles.content}>
-            <Link to="/about"> REGISTER COMPANY</Link>
-          </div>
-        </div>
         <div className={styles.card}>
           <img src={image2} />
           <div className={styles.content}>
-            <Link to="/about">REGISTER DOCTOR</Link>
+            <Link to="/loginDoctor">REGISTER DOCTOR</Link>
           </div>
         </div>
         <div className={styles.card}>
           <img src={image3} />
           <div className={styles.content}>
-            <Link to="/about">REGISTER USER</Link>
+            <Link to="/signup">REGISTER USER</Link>
           </div>
         </div>
       </div>

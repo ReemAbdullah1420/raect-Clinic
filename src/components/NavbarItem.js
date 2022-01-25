@@ -20,28 +20,25 @@ function NavbarItem() {
         <li>
           <Link to="/">HOME</Link>
         </li>
-        {/* <li>
-          <div className="dropdown">
-            <button className="dropbtn">
-              <div to="/book-now">HEALTH PROGRAMS</div>
-            </button>
-            <div className="dropdown-content">
-              <Link to="/book-now">HEALTH PROGRAMS</Link>
-              <Link to="/book-now">HEALTH PROGRAMS</Link>
-            </div>
-          </div>
-        </li> */}
-        <li>
-          <Link to="/doctors">Doctors</Link>
-        </li>
         <li>
           <Link to="/about">ABOUT</Link>
         </li>
         <li>
-          <Link to="/covid-19">COVID-19</Link>
+          <Link to="/doctors">Doctors</Link>
         </li>
+
         <li>
           <Link to="/register">REGISTER</Link>
+        </li>
+
+        <li>
+          <Link to="/profile">My PROFILE </Link>
+        </li>
+        <li>
+          <Link to="/section">Sections</Link>
+        </li>
+        <li>
+          <Link to="/healthtools">HEALTH TOOLS</Link>
         </li>
       </ul>
     </nav>
