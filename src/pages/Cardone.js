@@ -9,6 +9,7 @@ function CardOne() {
   const { sections } = useContext(ClinicContext)
   const [show, setShow] = useState(false)
   if (!sections) return <p> loding... </p>
+  // زيها ف الون ابوينت مينت اسوي 
   const sectionss = sections.find(section => section._id === sectionId)
 
   console.log(sections)

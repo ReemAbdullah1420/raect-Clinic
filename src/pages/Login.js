@@ -4,11 +4,11 @@ import ClinicContext from "../utils/ClinicContext"
 import styles from "./Login.module.css"
 
 function Login() {
-  const { loginUser, loginDoctor } = useContext(ClinicContext)
+  const { loginUser } = useContext(ClinicContext)
   return (
     <>
       <div className={styles.SignupForm}>
-        <form action="" method="POST" id="login" className={styles.animate} onSubmit={(loginUser, loginDoctor)}>
+        <form action="" method="POST" id="login" className={styles.animate} onSubmit={loginUser}>
           <i title="REMEMBER" onclick="savedetails()" className={styles.fafasave}></i>
           <center>
             <h1>LOG IN </h1>

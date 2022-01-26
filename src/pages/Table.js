@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../style.css"
 function Tableitem() {
   return (
@@ -25,7 +26,9 @@ function Tableitem() {
                 <td style={{ textAlign: "center" }}>sssss</td>
                 <td style={{ textAlign: "center" }}>ss</td>
                 <td style={{ textAlign: "center" }}>
-                  <button>show</button>
+                  {/* <Link to="/:Appointment">
+                    <button>show</button>
+                  </Link> */}
                 </td>
               </tr>
             </tbody>

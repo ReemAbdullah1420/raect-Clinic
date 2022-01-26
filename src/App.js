@@ -18,11 +18,13 @@ import Profile from "./pages/Profile"
 import C from "./pages/Card"
 
 function App() {
-  const navigate = useNavigate()
   const [sections, setSections] = useState([])
-  const [Appointments, setAppointments] = useState([])
+  // const [Appointments, setAppointments] = useState([])
   const [services, setServices] = useState([])
-  const [Programs, setPrograms] = useState([])
+  // const [Programs, setPrograms] = useState([])
+  const [Profiles, setProfile] = useState([])
+  const [ProfilesDoctor, setProfileDoctor] = useState([])
+  const navigate = useNavigate()
 
   const getsections = async () => {
     try {
@@ -48,10 +50,34 @@ function App() {
       console.log(error)
     }
   }
-  const Program = async () => {
+  // const Program = async () => {
+  //   try {
+  //     const response = await axios.get("http://localhost:5000/api/porgrams")
+  //     setPrograms(response.data)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+  // const getProfile = async () => {
+  //   try {
+  //     const response = await axios.get("http://localhost:5000/api/auth/user/profile/user", {
+  //       headers: {
+  //         Authorization: localStorage.tokenUser,
+  //       },
+  //     })
+  //     setProfile(response.data)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
+  const getProfileDoctor = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/porgrams")
-      setPrograms(response.data)
+      const response = await axios.get("http://localhost:5000/api/auth/doctors/profile", {
+        headers: {
+          Authorization: localStorage.tokenDoctor,
+        },
+      })
+      setProfileDoctor(response.data)
     } catch (error) {
       console.log(error)
     }
@@ -61,7 +87,9 @@ function App() {
     getsections()
     // Appointment()
     service()
-    Program()
+    // Program()
+    // getProfile()
+    getProfileDoctor()
   }, [])
 
   const signupUser = async e => {
@@ -94,8 +122,8 @@ function App() {
       }
 
       const response = await axios.post("http://localhost:5000/api/auth/login", userBody)
-      const token = response.data
-      localStorage.tokenUser = token
+      const tokenUser = response.data
+      localStorage.tokenUser = tokenUser
       console.log("login success")
       navigate("/")
     } catch (error) {
@@ -113,9 +141,8 @@ function App() {
       }
 
       const response = await axios.post("http://localhost:5000/api/auth/login/doctor", userBody)
-
-      const token = response.data
-      localStorage.tokenDoctor = token
+      const tokenDoctor = response.data
+      localStorage.tokenDoctor = tokenDoctor
       console.log("login success")
       navigate("/")
     } catch (error) {
@@ -123,51 +150,57 @@ function App() {
       else console.log(error)
     }
   }
-  const signupCompany = async e => {
-    e.preventDefault()
-    try {
-      const form = e.target
-      const userBody = {
-        firstName: form.elements.firstName.value,
-        lastName: form.elements.lastName.value,
-        email: form.elements.email.value,
-        password: form.elements.password.value,
-        image: form.elements.image.value,
-      }
+  // const signupCompany = async e => {
+  //   e.preventDefault()
+  //   try {
+  //     const form = e.target
+  //     const userBody = {
+  //       firstName: form.elements.firstName.value,
+  //       lastName: form.elements.lastName.value,
+  //       email: form.elements.email.value,
+  //       password: form.elements.password.value,
+  //       image: form.elements.image.value,
+  //     }
 
-      await axios.post("http://localhost:5000/api/auth/signup-company", userBody)
-      console.log("signup success")
-      navigate("/login")
-    } catch (error) {
-      if (error.response) console.log(error.response.data)
-      else console.log(error)
-    }
-  }
-  const loginCompany = async e => {
+  //     await axios.post("http://localhost:5000/api/auth/signup-company", userBody)
+  //     console.log("signup success")
+  //     navigate("/login")
+  //   } catch (error) {
+  //     if (error.response) console.log(error.response.data)
+  //     else console.log(error)
+  //   }
+  // }
+  // const loginCompany = async e => {
+  //   e.preventDefault()
+  //   try {
+  //     const form = e.target
+  //     const userBody = {
+  //       email: form.elements.email.value,
+  //       password: form.elements.password.value,
+  //     }
+  //     const response = await axios.post("http://localhost:5000/api/auth/login-company", userBody)
+  //     const token = response.data
+  //     localStorage.tokenCompany = token
+  //     console.log("login success")
+  //     navigate("/")
+  //   } catch (error) {
+  //     if (error.response) toast.error(error.response.data)
+  //     else console.log(error)
+  //   }
+  // }
+  const booking = async e => {
     e.preventDefault()
     try {
       const form = e.target
-      const userBody = {
-        email: form.elements.email.value,
-        password: form.elements.password.value,
-      }
-      const response = await axios.post("http://localhost:5000/api/auth/login-company", userBody)
-      const token = response.data
-      localStorage.tokenCompany = token
-      console.log("login success")
+      const Appoientmentid = form.elements.date.value
+      await axios.post(`http://localhost:5000/api/appointments/${Appoientmentid}`, {
+        headers: {
+          Authorization: localStorage.tokenUser,
+        },
+      })
+      // getProfile()
       navigate("/")
-    } catch (error) {
-      if (error.response) toast.error(error.response.data)
-      else console.log(error)
-    }
-  }
-  const Booking = async (e,Appoientmentid)  => {
-    e.preventDefault()
-    try {
-      const form = e.target
-      const Appoientmentid = form.elements.time.value
-      
-      await axios.post(`http://localhost:5000/api/appointments/${Appoientmentid}`)
+      // toast.success()
       form.reset()
     } catch (error) {
       if (error.response) console.log(error.response.data)
@@ -177,6 +210,8 @@ function App() {
 
   // const logout = () => {
   //   localStorage.removeItem("tokenClinic")
+  //   setProfile(null)
+  //   setProfileDoctor(null)
   //   console.log("logout success")
   // }
 
@@ -184,13 +219,16 @@ function App() {
     signupUser,
     loginUser,
     loginDoctor,
-    signupCompany,
-    loginCompany,
-    Booking,
+    // signupCompany,
+    // loginCompany,
+    booking,
     sections,
-    Appointments,
+    // Appointments,
     services,
-    Programs,
+    // Programs,
+    Profiles,
+    ProfilesDoctor,
+
     // logout,
   }
   return (
