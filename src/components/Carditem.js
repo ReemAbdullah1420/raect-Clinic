@@ -7,32 +7,19 @@ function Carditem() {
   console.log(sections)
   return (
     <>
-          <div className={styles.wrapper}>
-          <h1>Parallax Flipping Cards</h1>
-          <hr />
-      {sections?.map(section => (
-          <div className={styles.cols}>
-            <div className={styles.col} ontouchstart="this.classList.toggle('hover');">
-              <div className={styles.container}>
-                <Link to={`/${section._id}`}>
-                  <div className={styles.front} style={{ backgroundImage: ` url("${section.image}")` }}>
-                    <div className={styles.inner}>
-                      <p>{section.name}</p>
-                      {/* <span>Lorem ipsum</span> */}
-                    </div>
-                  </div>
-                <div className={styles.back}>
-                  <div className={styles.inner}>
-                    <p>{section.description}</p>
-                    <button>HERE</button>
-                  </div>
-                </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-      ))}
-      </div>
+      <section className={styles.ourservices}>
+        <hr />
+        <div className={styles.contener}>
+          {sections?.map(section => (
+            <>
+              <Link to={`/${section._id}`}>
+                <img src={section.image} className={styles.img} />
+                <p className={styles.inner}>{section.name}</p>
+              </Link>
+            </>
+          ))}
+        </div>
+      </section>
     </>
   )
 }

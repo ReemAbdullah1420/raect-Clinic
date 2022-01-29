@@ -48,7 +48,7 @@
 
 .sectitle h2.center:before {
     position: absolute;
-    content: '';
+    /* content: ''; */
     background: #26cdff;
     width: 50px;
     height: 3px;
@@ -87,6 +87,9 @@
     border-color: #26cdff;
     -webkit-transition: .5s;
     transition: .5s;
+    display: flex;
+    flex-direction: row;
+
 }
 
 /* .ourservices .singleserviceitem  {
